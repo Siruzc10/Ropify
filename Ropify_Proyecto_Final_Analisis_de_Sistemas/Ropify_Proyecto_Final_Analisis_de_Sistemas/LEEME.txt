@@ -1,0 +1,48 @@
+ROPIFY — TRABAJO FINAL DE ANÁLISIS DE SISTEMAS
+=====================================================================
+Equipo: Tomás Carrizo (Product Owner) · Joseph Uzcátegui (Scrum Master)
+        Paulo Días y Ezequiel Huarachi (Developers)
+Docente: Renzo Viñolo · Escuela Técnica N° 29 «Reconquista de Buenos Aires» · 2026
+
+QUÉ HAY EN CADA CARPETA
+---------------------------------------------------------------------
+1_Etapa1_Documentos/
+   1.1 Documento de Proyecto Cliente (Ropify): fundamentación, objetivos, problemas,
+       usuarios, beneficiarios, logo y slogan.
+   1.2 Documento de Empresa Desarrolladora (Nucleo Dev).
+
+2_Carpeta_de_Campo/
+   2.1 Carpeta de Campo completa (versión 1.1, ≈60 páginas), organizada con Scrum en sprints:
+       A Marco (ciclo de vida, Scrum, plan de sprints)      E Requerimientos (documento funcional)
+       B Sprint 0 · Preparación                              F Casos de uso (los 37 documentados) y 72 casos de prueba
+       C Sprint 1 · Reconocimiento, entrevista, FODA         G Diseño (arquitectura, DFD, base de datos, navegación, seguridad)
+       D Sprint 2 · Factibilidad (técnica, financiera,       H Roadmap de desarrollo, riesgos, cierre
+         legal y operativa)                                  I Desarrollo e implementación del sitio web (sprints 6 a 9)
+                                                             Anexo · Bibliografía y fuentes
+       El historial de cambios de la versión 1.1 está en el índice de la Carpeta de Campo.
+
+3_Base_de_Datos/
+   01_ropify_estructura.sql              Base original (7 tablas), reconstruida de tus archivos de XAMPP.
+   02_ropify_mejoras_y_ampliacion.sql    Mejoras + 4 tablas nuevas (modelo de diseño: 11 tablas).
+   03_ropify_datos_de_ejemplo.sql        Datos ficticios para probar (opcional).
+   04_ropify_extras_web.sql              NUEVO · Complemento para la web: bloqueo de login, token de recuperación,
+                                         consultas de ayuda/arrepentimiento, auditoría, visitas y servicio de envío.
+   DER_*.png                             Diagramas entidad-relación (DER_complemento_web.png: tablas del script 04).
+
+4_Diagramas/   Casos de uso (A-D), arquitectura, DFD, mapas de navegación y logos (PNG).
+
+Ropify-web/   Sitio web completo (PHP + MariaDB, para XAMPP): catálogo, publicación y moderación,
+              carrito, pago (pasarela simulada), envíos, liquidaciones, mensajes, denuncias y panel
+              de administración. Ver Ropify-web/README.md (puesta en marcha, cuentas de prueba, guion
+              de demostración y trazabilidad con las historias de usuario).
+
+
+CÓMO IMPORTAR LA BASE DE DATOS EN XAMPP
+---------------------------------------------------------------------
+1. Abrir XAMPP e iniciar Apache y MySQL.
+2. Entrar a phpMyAdmin (http://localhost/phpmyadmin) → pestaña «Importar».
+3. Elegir 01_ropify_estructura.sql → «Importar». Repetir con el 02, el 04 y, si se quiere, con el 03.
+   (El 02 requiere haber importado antes el 01. El 04 es necesario para la web. El 03 es solo para pruebas.)
+4. Copiar Ropify-web a C:\xampp\htdocs\ y abrir http://localhost/Ropify-web/  (cuentas de prueba en Ropify-web/README.md).
+Los scripts 01 a 03 se probaron en MariaDB 10.11 sin errores. El 04 usa «IF NOT EXISTS» (válido en MariaDB/XAMPP) y se puede ejecutar más de una vez.
+

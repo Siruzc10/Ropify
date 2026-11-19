@@ -1,0 +1,16 @@
+<?php
+// Copiá este archivo como config.local.php y ajustá tus datos.
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'ropify');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+
+// Cambiá esta clave por una cadena larga y secreta propia.
+define('CLAVE_APP', 'poné-acá-una-clave-larga-y-secreta');
+
+// Producción: desactivar el modo demostración y activar el correo real.
+// define('MODO_DEMO', false);
+// define('MAIL_ACTIVO', true);
+// define('EMAIL_REMITENTE', 'no-responder@tudominio.com.ar');
+// define('EMAIL_AYUDA', 'ayuda@tudominio.com.ar');
+// define('URL_SITIO', 'https://www.tudominio.com.ar/');
